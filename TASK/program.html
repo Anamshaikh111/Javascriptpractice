@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Mini Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>JavaScript Mini Project</h1>
+
+    <!-- 1. TO-DO LIST -->
+    <section>
+        <h2>1. To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button onclick="addTask()">Add Task</button>
+        <ul id="taskList"></ul>
+    </section>
+
+    <!-- 2. FORM VALIDATION -->
+    <section>
+        <h2>2. Form Validation</h2>
+        <form onsubmit="return validateForm()">
+            <input type="text" id="name" placeholder="Enter Name"><br>
+            <input type="text" id="email" placeholder="Enter Email"><br>
+            <input type="password" id="password" placeholder="Enter Password"><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+
+    <!-- 3. DARK/LIGHT MODE -->
+    <section>
+        <h2>3. Theme Toggle</h2>
+        <button onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+    </section>
+
+    <!-- 4. COUNTER -->
+    <section>
+        <h2>4. Counter</h2>
+        <h3 id="count">0</h3>
+        <button onclick="increase()">+1</button>
+        <button onclick="decrease()">-1</button>
+        <button onclick="reset()">Reset</button>
+    </section>
+
+    <!-- 5. MODAL POPUP -->
+<section>
+    <h2>5. Modal Popup</h2>
+    <button onclick="openModal()">Open Modal</button>
+</section>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>This is a modal popup!</p>
+    </div>
+</div>
+
+<!-- 6. PASSWORD STRENGTH -->
+<section>
+    <h2>6. Password Strength Checker</h2>
+    <input type="password" id="strengthPassword" placeholder="Enter Password" onkeyup="checkStrength()">
+    <p id="strengthResult"></p>
+</section>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 let names = [];
 
-// Add name
+
 function addName() {
     let input = document.getElementById("nameInput");
     let name = input.value.trim();
@@ -15,7 +15,7 @@ function addName() {
     displayNames();
 }
 
-// Display names
+
 function displayNames() {
     let list = document.getElementById("nameList");
     list.innerHTML = "";
@@ -27,13 +27,13 @@ function displayNames() {
     });
 }
 
-// Sort names alphabetically
+
 function sortNames() {
     names.sort((a, b) => a.localeCompare(b));
     displayNames();
 }
 
-// Reset list
+
 function resetList() {
     names = [];
     displayNames();

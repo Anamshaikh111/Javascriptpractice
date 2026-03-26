@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Generator & Register</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Password Generator</h1>
+
+  <div class="container">
+    <label>Password Length:</label>
+    <input type="number" id="length" value="8" min="4" max="20">
+
+    <div>
+      <input type="checkbox" id="numbers"> Include Numbers
+      <input type="checkbox" id="uppercase"> Include Uppercase
+      <input type="checkbox" id="symbols"> Include Special Characters
+    </div>
+
+    <button onclick="generatePassword()">Generate Password</button>
+
+    <input type="text" id="password" readonly>
+    <button onclick="copyPassword()">Copy</button>
+
+    <div id="strength"></div>
+  </div>
+
+  <hr>
+
+  <h1>Register</h1>
+
+  <form onsubmit="return validateForm()">
+    <input type="text" id="username" placeholder="Username"><br>
+    <input type="email" id="email" placeholder="Email"><br>
+    <input type="password" id="regPassword" placeholder="Password"><br>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password"><br>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <p>Already registered? <a href="login.html">Login here</a></p>
+
+  <script src="script.js"></script>
+</body>
+</html>

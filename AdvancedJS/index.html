@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .redText{
+            color: red;
+        }
+
+        .textColor{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="textColor redText" style="text-align: center;">This is heading</h1>
+
+    <script>
+        function displayName(){
+            console.log("Company Name -> Wisdom Sprouts")
+        }
+        function getData(cb){
+            setTimeout(cb, 5000)
+        }
+        getData(displayName)
+
+        console.log("start")
+        for(i=1; i<=5; i++){
+            console.log(i)
+        }
+        console.log("End")
+        console.log("___________")
+        console.log("START")
+        setTimeout(( )=> {
+            for(i=1; i<=5; i++){
+                console.log(i)
+            }
+        }, 3000)
+
+        console.log("END")
+    </script>
+
+    <script>
+        let myPromise = new Promise((resolve, reject) => {
+            resolve("Successfully resolved")
+        });
+
+        myPromise
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((error) => {
+            console.error("Something went wrong: ", error);
+        });
+    </script>
+<script>
+    let MyPromise = new Promise((resolve, reject) => {
+            let success = false
+
+            if (success) {
+                resolve("Data fetch Successfully")
+            } else {
+                reject("Error While fetching data")
+            }
+        })
+
+        MyPromise
+            .then((result) => {
+                console.log("Success", result)
+            })
+
+            .catch((error) => {
+                console.log("Error", error)
+            })
+
+        //Promise 3rd Example
+
+        let pizzaPromise = new Promise((resolve, reject) => {
+
+            setTimeout(() => {
+
+                let isAvailable = true
+
+                if (isAvailable) {
+                    resolve("Pizza delivered!")
+                } else {
+                    reject("Pizza shop closed.")
+                }
+
+            }, 2000)
+
+        })
+
+        pizzaPromise
+
+            .then((message) => {
+                console.log("Yay!", message)
+            })
+
+
+            .catch((err) => {
+                console.log("Oops!", err)
+            })
+
+        //async/await
+        async function fetchWeather() {
+            await fetch("api for weather")
+                .then(res => res.json())
+                .then(data => console.log(data))
+                .catch(error => console.log(error))
+        }
+        setInterval(() => {
+            console.log("Helloooooo after 5 sec")
+        }, 5000)
+    </script>
+
+<div class="container" style="text-align: center;">
+    <h3>
+        <h2 id="demo"></h2>
+        <span id="hr"></span>
+        :
+        <span id="min"></span>
+        :
+        <span id="sec"></span>
+    </h3>
+</div>
+
+    <script>
+        function getDigiClock(){
+            const today = new Date()
+            console.log(today)
+
+            let dayDate = today.toDateString()
+            document.getElementById("demo").textContent =  dayDate
+
+            hr = today.getHours()
+            console.log(hr)
+            document.getElementById("hr").textContent = hr
+
+            min = today.getMinutes()
+            console.log(hr)
+            document.getElementById("min").textContent = min
+
+            sec = today.getSeconds()
+            console.log(sec)
+            document.getElementById("sec").textContent = sec
+
+        }
+
+        setInterval(getDigiClock,1000)
+
+    </script>
+
+</body>
+</html>
